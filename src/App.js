@@ -43,9 +43,10 @@ class App extends Component {
       <Heading />
         <main>
           <MainForm 
-          updateFeature={((feature,newValue) => this.updateFeature(feature, newValue))}
+          features={this.props.features}
+          handleUpdate={(feature, newValue) => this.updateFeature(feature, newValue)}
           selected={this.state.selected}
-          features={this.state.features}
+
           />
           <SummaryOptions selected={this.state.selected}/>
         </main>
